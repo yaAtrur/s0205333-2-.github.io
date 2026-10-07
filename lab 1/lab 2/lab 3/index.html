@@ -4,16 +4,27 @@
   <meta charset="UTF-8">
   <title>Задание 2 — Макет страницы</title>
   <meta name="robots" content="noindex">
+  
+  <!-- Подключение внешнего CSS-файла -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- Шапка сайта -->
   <header id="header">
     <div class="container">
+
+      <!-- Верхняя часть шапки: логотип и заголовок -->
       <div class="header-top">
+        <!-- Логотип -->
         <div class="logo">Лого</div>
+
+        <!-- Главный заголовок страницы -->
         <h1 class="site-title">Задание 2</h1>
       </div>
 
+      <!-- Навигационное меню -->
       <nav id="nav">
         <ul>
           <li><a href="index.html">Открыть главную страницу</a></li>
@@ -21,12 +32,18 @@
           <li><a href="#data">Перейти к данным</a></li>
         </ul>
       </nav>
+
     </div>
   </header>
 
+
+  <!-- Основное содержимое страницы -->
   <main class="container">
+
+    <!-- Блок со списком гиперссылок -->
     <section class="links-list">
       <h2>Список гиперссылок</h2>
+
       <ul>
         <li><a href="http://kubsu.ru/">КубГУ — HTTP</a></li>
         <li><a href="https://kubsu.ru/">КубГУ — HTTPS</a></li>
@@ -42,14 +59,33 @@
         <li><a href="../../upper-page.html">Страница двумя уровнями выше</a></li>
         <li><p>Более подробную информацию можно найти <a href="https://kubsu.ru/">на официальном сайте КубГУ</a>.</p></li>
         <li><a href="https://ru.ruwiki.ru/wiki/Кук,_Тим#Биография">Фрагмент страницы стороннего сайта</a></li>
+
         <li>
           <p>Карта изображения:</p>
-          <img src="universitet.jpg" alt="Карта изображения" width="500" height="300" usemap="#image-map">
+
+          <!-- Изображение с активными областями -->
+          <img src="universitet.jpg"
+               alt="Карта изображения"
+               width="500"
+               height="300"
+               usemap="#image-map">
+
           <map name="image-map">
-            <area shape="rect" coords="0,0,250,300" href="https://kubsu.ru/" alt="КубГУ">
-            <area shape="circle" coords="375,150,75" href="https://ya.ru/" alt="W3C">
+
+            <!-- Прямоугольная активная область -->
+            <area shape="rect"
+                  coords="0,0,250,300"
+                  href="https://kubsu.ru/"
+                  alt="КубГУ">
+
+            <!-- Круглая активная область -->
+            <area shape="circle"
+                  coords="375,150,75"
+                  href="https://ya.ru/"
+                  alt="W3C">
           </map>
         </li>
+
         <li><a href="">Ссылка с пустым href</a></li>
         <li><a>Ссылка без href</a></li>
         <li><a href="https://kubsu.ru/" rel="nofollow">Ссылка с запретом перехода поисковика</a></li>
@@ -57,9 +93,15 @@
       </ul>
     </section>
 
+
+    <!-- Таблица. id нужен для перехода по ссылке #data -->
     <section class="table-section" id="data">
+
       <h2>Таблица</h2>
+
       <table>
+
+        <!-- Заголовочная часть таблицы -->
         <thead>
           <tr>
             <th>Колонка 1</th>
@@ -68,45 +110,64 @@
             <th>Колонка 4</th>
           </tr>
         </thead>
+
+        <!-- Основные данные таблицы -->
         <tbody>
+
           <tr>
             <td>Данные 1</td>
             <td>Данные 2</td>
+
+            <!-- colspan="2" объединяет две ячейки по горизонтали -->
             <td colspan="2">Объединённая ячейка (строка 1)</td>
           </tr>
+
           <tr>
             <td>Данные 3</td>
             <td>Данные 4</td>
             <td>Данные 5</td>
             <td>Данные 6</td>
           </tr>
+
           <tr>
+            <!-- Объединяем две ячейки -->
             <td colspan="2">Объединённая ячейка (строка 3)</td>
             <td>Данные 7</td>
             <td>Данные 8</td>
           </tr>
+
           <tr>
             <td>Данные 9</td>
             <td>Данные 10</td>
             <td>Данные 11</td>
             <td>Данные 12</td>
           </tr>
+
           <tr>
             <td>Данные 13</td>
+
+            <!-- Одна ячейка занимает сразу три столбца -->
             <td colspan="3">Объединённая ячейка (строка 5)</td>
           </tr>
+
           <tr>
             <td>Данные 14</td>
             <td>Данные 15</td>
             <td>Данные 16</td>
             <td>Данные 17</td>
           </tr>
+
         </tbody>
       </table>
     </section>
-
+    <!-- Раздел с формой -->
     <section id="form">
       <h2>Форма</h2>
+      <!--
+        form — начало формы.
+        action — адрес, куда отправляются данные.
+        method="POST" — способ отправки данных с помощью HTTP запроса.
+      -->
       <form action="/form.php" method="POST">
         <label>
           ФИО:<br>
@@ -170,10 +231,13 @@
     </section>
   </main>
 
+
+  <!-- Нижняя часть сайта -->
   <footer id="footer">
     <div class="container">
       <p>(с) Артур Багян</p>
     </div>
   </footer>
+
 </body>
 </html>
