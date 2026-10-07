@@ -1,25 +1,30 @@
 /* style.css */
+
 body {
+  /* Общие настройки страницы */
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
 
 #header {
+  /* Шапка во всю ширину */
   background-color: #5cdfe5;
   width: 100%;
   padding: 15px 0;
 }
 
-/* Обычный контейнер для основной части страницы */
+/* Основной контейнер страницы */
 .container {
+  /* Максимальная ширина — 960px, центрирование */
   max-width: 960px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-/* Контейнер именно шапки — на всю ширину */
+/* Контейнер шапки */
 #header .container {
+  /* Шапка во всю ширину без ограничения 960px */
   max-width: none;
   width: 100%;
   box-sizing: border-box;
@@ -28,76 +33,112 @@ body {
 }
 
 .header-top {
+  /* Flexbox для расположения элементов */
   display: flex;
+
+  /* Логотип слева, заголовок справа */
   justify-content: space-between;
+
+  /* Выравнивание по вертикали */
   align-items: center;
 }
 
 .logo {
+  /* Круглый логотип размером 50×50px */
   width: 50px;
   height: 50px;
+
+  /* Круглая форма и граница */
   border-radius: 50%;
   border: 2px solid #000;
+
+  /* Выравнивание текста внутри */
   display: inline-block;
   text-align: center;
   line-height: 50px;
 }
 
 .site-title {
+  /* Убран стандартный отступ заголовка */
   margin: 0;
 }
 
 #nav {
+  /* Отступ навигации от верхней части */
   margin-top: 10px;
 }
 
 #nav ul {
+  /* Убраны маркеры и стандартные отступы */
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 #nav ul li {
+  /* Ссылки расположены в одну строку */
   display: inline-block;
+
+  /* Расстояние между ссылками */
   margin-right: 15px;
 }
 
 #nav ul li a {
+  /* Убрано подчёркивание ссылок */
   text-decoration: none;
+
+  /* Чёрный цвет ссылок */
   color: #000;
 }
 
 main {
+  /* Отступы основной части */
   padding: 20px 0;
 }
 
 .links-list, .table-section, #form {
+  /* Расстояние между разделами */
   margin-bottom: 30px;
 }
 
 table {
+  /* Таблица во всю ширину контейнера */
   width: 100%;
+
+  /* Объединены границы ячеек */
   border-collapse: collapse;
 }
 
 table th, table td {
+  /* Граница и внутренние отступы ячеек */
   border: 1px solid #000;
   padding: 8px;
+
+  /* Текст по левому краю */
   text-align: left;
 }
 
 table tbody tr:nth-child(odd) {
+  /* Нечётные строки — серые */
   background-color: #f2f2f2;
 }
 
 table tbody tr:nth-child(even) {
+  /* Чётные строки — белые */
   background-color: #ffffff;
 }
 
 #footer {
+  /* Подвал во всю ширину */
   background-color: #5cdfe5;
   width: 100%;
+
+  /* Внутренние отступы */
   padding: 15px 0;
+
+  /* Отступ от основной части */
   margin-top: 30px;
+
+  /* Текст по центру */
   text-align: center;
 }
